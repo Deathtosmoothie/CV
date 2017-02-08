@@ -1,14 +1,14 @@
-import { CVPage } from './app.po';
+import { CvPage } from './app.po';
 
 describe('cv App', function() {
-  let page: CVPage;
+  let page: CvPage;
 
   beforeEach(() => {
-    page = new CVPage();
+    page = new CvPage();
   });
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('cv works!');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
