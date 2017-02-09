@@ -7,6 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
+  categories = ['all','HTML5/CSS3','JavaScript/JQuery','PHP','SASS'];
+
+  onClick(category: any) {
+
+      if(category == 'all') {
+          alert('all clicked');
+      }
+      else {
+          alert('another clicked');
+      }
+  }
+
   constructor() { }
 
   ngOnInit() {

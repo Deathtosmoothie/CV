@@ -24,10 +24,7 @@
       <div class="col-sm-12">
 
         <ul id="filter">
-          <li class="active" data-group="all">All</li>
-          <li data-group="slideshow">Slideshow</li>
-          <li data-group="video">Video</li>
-          <li data-group="image">Image</li>
+          <li *ngFor="let category of categories" (click)="onClick(category)">{{ category }}</li>
         </ul>
 
       </div>
@@ -35,6 +32,13 @@
     </div><!-- .row -->
 
     <!-- Portfolio Filter end -->
+    <span>{{ choice }}</span>
+    <div>
+      <ul [ngSwitch]="choice">
+        <li *ngSwitchCase="1">1</li>
+        <li *ngSwitchCase="2">2</li>
+      </ul>
+    </div>
 
   </div><!-- .contaier -->
   </section>
