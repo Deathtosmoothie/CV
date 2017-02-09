@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { ItemsPortfolioComponent } from './items-portfolio/items-portfolio.component';
+
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
@@ -11,12 +13,7 @@ export class PortfolioComponent implements OnInit {
 
   onClick(category: any) {
 
-      if(category == 'all') {
-          alert('all clicked');
-      }
-      else {
-          alert('another clicked');
-      }
+
   }
 
   constructor() { }

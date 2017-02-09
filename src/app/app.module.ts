@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PreloaderComponent } from './preloader/preloader.component';
 import { HeaderComponent } from './header/header.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ItemsPortfolioComponent } from './portfolio/items-portfolio/items-portfolio.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     HomeComponent,
     PreloaderComponent,
     HeaderComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    ItemsPortfolioComponent
   ],
   imports: [
     BrowserModule,
