@@ -11,6 +11,23 @@ export class ItemsPortfolioComponent implements OnInit {
     @Input() category;
 
 
+  showBlock() {
+
+        let num;
+
+        if (this.category == 'all') {
+            num = '1';
+        }
+        else {
+            num = 'wait..';
+        }
+
+        return num;
+}
+
+
+
+
 
   constructor() { }
 
