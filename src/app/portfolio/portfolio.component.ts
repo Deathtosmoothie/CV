@@ -11,10 +11,15 @@ export class PortfolioComponent implements OnInit {
 
   categories = ['all','HTML5/CSS3','JavaScript/JQuery','PHP','SASS'];
 
+
+
   onClick(category: any) {
 
-
+    this.category = category;
+      alert(category);
   }
+
+    category;
 
   constructor() { }
 
