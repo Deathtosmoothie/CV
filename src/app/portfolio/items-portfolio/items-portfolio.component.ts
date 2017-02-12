@@ -8,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ItemsPortfolioComponent implements OnInit {
 
+    PHP = [1,2,3,4,5];
+
     @Input() category;
 
 

@@ -649,16 +649,30 @@ textarea.form-control {
 }
 
 /* Grid and portfolio items */
+.flex-container {
+    padding: 0;
+    margin: 0;
+
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    justify-content: space-around;
+}
 .portfolio-item {
 	background-image: url('/assets/images/p1-1.jpg');
-	height: 300px;
-	background-size: cover;
-	display: block;
-	width: 300px;
+    height: 250px;
+    background-size: cover;
+    display: block;
+    width: 264px;
+    margin: 10px;
 }
 .titles-item {
 	display: block;
-	margin: 140px auto;
+	margin: 100px auto;
 	width: 47px;
 }
 .titles-item p {
