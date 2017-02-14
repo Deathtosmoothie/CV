@@ -1,10 +1,10 @@
+<app-items-portfolio-pull #pull></app-items-portfolio-pull>
 <div class="flex-container">
-    <div class="portfolio-item" *ngFor="let php of PHP">
-      <a href="#" >
+    <a  href="{{pull.all.href}}" target="_blank" class="portfolio-item" [ngStyle]="{'background-image': pull.all.imagePath}">
         <div class="titles-item">
-          <p>title{{php}}</p>
-          <p>subtitle</p>
+          <p>{{pull.all.title}}</p>
+          <p>{{pull.all.subTitle}}</p>
         </div>
       </a>
-    </div>
 </div>
+

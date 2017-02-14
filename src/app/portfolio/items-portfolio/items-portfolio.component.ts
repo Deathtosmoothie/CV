@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ItemsPortfolioPullComponent } from './items-portfolio-pull/items-portfolio-pull.component';
+
 
 
 @Component({
@@ -6,28 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './items-portfolio.component.html',
   styleUrls: ['./items-portfolio.component.css']
 })
-export class ItemsPortfolioComponent implements OnInit {
+export class ItemsPortfolioComponent {
 
     PHP = [1,2,3,4,5];
 
     @Input() category;
 
-
-  showBlock() {
-
-        let num;
-
-        if (this.category == 'all') {
-            num = '1';
-        }
-        else {
-            num = 'wait..';
-        }
-
-        return num;
-}
-
-
+    //test = "url('/assets/images/p1-1.jpg')";
 
 
 

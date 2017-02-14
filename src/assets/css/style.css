@@ -663,7 +663,7 @@ textarea.form-control {
     justify-content: space-around;
 }
 .portfolio-item {
-	background-image: url('/assets/images/p1-1.jpg');
+	/*background-image: url('/assets/images/p1-1.jpg');*/
     height: 250px;
     background-size: cover;
     display: block;
@@ -672,13 +672,14 @@ textarea.form-control {
 }
 .titles-item {
 	display: block;
-	margin: 100px auto;
-	width: 47px;
+	margin: 90px auto;
 }
 .titles-item p {
 	display: block;
 	text-align: center;
 	color: #000;
+	text-decoration: none;
+	font-family: InconsolataBold;
 }
 .portfolio-item:hover {
 	opacity: 0.5;

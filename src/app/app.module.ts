@@ -9,6 +9,7 @@ import { PreloaderComponent } from './preloader/preloader.component';
 import { HeaderComponent } from './header/header.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ItemsPortfolioComponent } from './portfolio/items-portfolio/items-portfolio.component';
+import { ItemsPortfolioPullComponent } from './portfolio/items-portfolio/items-portfolio-pull/items-portfolio-pull.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ItemsPortfolioComponent } from './portfolio/items-portfolio/items-portf
     PreloaderComponent,
     HeaderComponent,
     PortfolioComponent,
-    ItemsPortfolioComponent
+    ItemsPortfolioComponent,
+    ItemsPortfolioPullComponent
   ],
   imports: [
     BrowserModule,
