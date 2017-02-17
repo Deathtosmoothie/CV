@@ -3,6 +3,7 @@ import { ItemsPortfolioPullComponent } from './items-portfolio-pull/items-portfo
 
 
 
+
 @Component({
   selector: 'app-items-portfolio',
   templateUrl: './items-portfolio.component.html',
@@ -10,11 +11,12 @@ import { ItemsPortfolioPullComponent } from './items-portfolio-pull/items-portfo
 })
 export class ItemsPortfolioComponent {
 
-    PHP = [1,2,3,4,5];
+
 
     @Input() category;
 
-    //test = "url('/assets/images/p1-1.jpg')";
+
+
 
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import {ItemSite} from "../item-site";
 
@@ -9,12 +9,32 @@ import {ItemSite} from "../item-site";
 })
 export class ItemsPortfolioPullComponent implements OnInit {
 
-  all = new ItemSite('http://www.awolo.work',"url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",'Awolo Digital',
-      'Официальный сайт компании, в которой я работал');
+    @Input() category;
+
+//allItems = new ItemSite('http://www.awolo.work',"url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
+//            'Awolo Digital');
 
 
 
-  constructor() { }
+    allItems: Array<ItemSite> = [
+        new ItemSite('http://www.awolo.work',
+            "url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
+            'Awolo Digital'),
+        new ItemSite('https://www.fastforms.co',
+            "url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
+            'Fastforms')
+    ];
+
+    PHP: Array<ItemSite> = [
+        new ItemSite('https://www.fastforms.co',
+            "url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
+            'Fastforms'),
+        new ItemSite('http://www.мегакам.рф',
+            "url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
+            'Мегакам')
+    ];
+
+    constructor() { }
 
   ngOnInit() {
   }

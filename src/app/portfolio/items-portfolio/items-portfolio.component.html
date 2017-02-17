@@ -1,10 +1,10 @@
 <app-items-portfolio-pull #pull></app-items-portfolio-pull>
 <div class="flex-container">
-    <a  href="{{pull.all.href}}" target="_blank" class="portfolio-item" [ngStyle]="{'background-image': pull.all.imagePath}">
+    <a *ngFor = "let item of pull.allItems" href="{{item.href}}" target="_blank" class="portfolio-item" [ngStyle]="{'background-image': item.imagePath}">
         <div class="titles-item">
-          <p>{{pull.all.title}}</p>
-          <p>{{pull.all.subTitle}}</p>
+            <p>{{item.title}}</p>
         </div>
-      </a>
+    </a>
+
 </div>
 
