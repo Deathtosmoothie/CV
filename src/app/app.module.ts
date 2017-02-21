@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ItemsPortfolioComponent } from './portfolio/items-portfolio/items-portfolio.component';
 import { ItemsPortfolioPullComponent } from './portfolio/items-portfolio/items-portfolio-pull/items-portfolio-pull.component';
+import { CalloutComponent } from './callout/callout.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ItemsPortfolioPullComponent } from './portfolio/items-portfolio/items-p
     HeaderComponent,
     PortfolioComponent,
     ItemsPortfolioComponent,
-    ItemsPortfolioPullComponent
+    ItemsPortfolioPullComponent,
+    CalloutComponent
   ],
   imports: [
     BrowserModule,
