@@ -9,7 +9,7 @@ import { ItemsPortfolioComponent } from './items-portfolio/items-portfolio.compo
 })
 export class PortfolioComponent implements OnInit {
 
-  categories = ['all','HTML5/CSS3','JavaScript/JQuery','PHP','SASS'];
+  categories = ['all','HTML5/CSS3','JavaScript/JQuery','PHP','WordPress'];
 
 
 

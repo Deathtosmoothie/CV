@@ -675,7 +675,7 @@ textarea.form-control {
 	margin: 90px auto;
 }
 .titles-item p {
-	display: block;
+	display: none;
 	text-align: center;
 	color: #000;
 	text-decoration: none;
@@ -684,6 +684,9 @@ textarea.form-control {
 .portfolio-item:hover {
 	opacity: 0.5;
 	cursor: pointer;
+}
+.portfolio-item:hover .titles-item p {
+  display: block;
 }
 /*
 .portfolio-items-container {
