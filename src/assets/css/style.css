@@ -669,10 +669,12 @@ textarea.form-control {
     display: block;
     width: 264px;
     margin: 10px;
+
 }
 .titles-item {
 	display: block;
-	margin: 90px auto;
+    background-color: white;
+    opacity: 0.9;
 }
 .titles-item p {
 	display: none;
@@ -682,7 +684,6 @@ textarea.form-control {
 	font-family: InconsolataBold;
 }
 .portfolio-item:hover {
-	opacity: 0.5;
 	cursor: pointer;
 }
 .portfolio-item:hover .titles-item p {
