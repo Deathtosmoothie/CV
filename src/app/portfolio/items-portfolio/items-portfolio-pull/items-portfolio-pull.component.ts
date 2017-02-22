@@ -130,6 +130,12 @@ export class ItemsPortfolioPullComponent implements OnInit {
         'Yapdomik')
     ];
 
+    NG: Array<ItemSite> = [
+      new ItemSite('',
+        "url('/assets/images/portfolio/portfolio.jpg')",
+        'Portfolio')
+    ];
+
     constructor() { }
 
   ngOnInit() {
