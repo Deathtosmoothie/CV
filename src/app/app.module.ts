@@ -12,6 +12,7 @@ import { ItemsPortfolioComponent } from './portfolio/items-portfolio/items-portf
 import { ItemsPortfolioPullComponent } from './portfolio/items-portfolio/items-portfolio-pull/items-portfolio-pull.component';
 import { CalloutComponent } from './callout/callout.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TechnologiesComponent } from './technologies/technologies.component';
     ItemsPortfolioComponent,
     ItemsPortfolioPullComponent,
     CalloutComponent,
-    TechnologiesComponent
+    TechnologiesComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
