@@ -11,9 +11,6 @@ export class ItemsPortfolioPullComponent implements OnInit {
 
     @Input() category;
 
-//allItems = new ItemSite('http://www.awolo.work',"url('https://st.kp.yandex.net/images/film_iphone/iphone360_677768.jpg')",
-//            'Awolo Digital');
-
 
 
     allItems: Array<ItemSite> = [

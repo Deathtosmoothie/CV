@@ -531,6 +531,11 @@ textarea.form-control {
 	color: #222;
 }
 
+.iconbox-icon img {
+    width: 100px;
+    height: 100px;
+}
+
 .iconbox-title {
 	margin: 0 0 15px;
 	padding: 0;

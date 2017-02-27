@@ -20,17 +20,14 @@
 
     <div class="row">
 
-      <div class="col-sm-3">
+      <div class="col-sm-3 col-md-2" *ngFor = 'let item of items'>
 
         <div class="iconbox wow bounceIn" >
           <div class="iconbox-icon">
-            <img src="">
+            <img src="{{item.imagePath}}">
           </div>
           <div class="iconbox-text">
-            <h3 class="iconbox-title"></h3>
-            <div class="iconbox-desc">
-              Thus, then, one of our own noble stamp, even a whaleman, is the tutelary guardian of England.
-            </div>
+            <h3 class="iconbox-title">{{ item.title }}</h3>
           </div>
         </div>
 
