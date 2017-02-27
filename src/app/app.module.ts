@@ -13,6 +13,7 @@ import { ItemsPortfolioPullComponent } from './portfolio/items-portfolio/items-p
 import { CalloutComponent } from './callout/callout.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { AboutComponent } from './about/about.component';
     ItemsPortfolioPullComponent,
     CalloutComponent,
     TechnologiesComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
