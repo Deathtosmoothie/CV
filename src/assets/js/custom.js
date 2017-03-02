@@ -42,7 +42,7 @@
 		$('body').scrollspy({
 			target: '.navbar-custom',
 			offset: 70
-		})
+		});
 
 		/* ---------------------------------------------- /*
 		 * Background image.
@@ -64,7 +64,7 @@
 		 * Twitter
 		/* ---------------------------------------------- */
 
-		var twitterConfig = {
+	/*	var twitterConfig = {
 			id: '345170787868762112',
 			domId: '',
 			maxTweets: 3,
@@ -99,7 +99,7 @@
 				navigationText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
 			});
 		}
-
+*/
 		/* ---------------------------------------------- /*
 		 * Initialize shuffle plugin
 		/* ---------------------------------------------- */
@@ -156,7 +156,7 @@
 		 * Contact form ajax
 		/* ---------------------------------------------- */
 
-		$('#contact-form').submit(function(e) {
+	/*	$('#contact-form').submit(function(e) {
 
 			e.preventDefault();
 
@@ -199,13 +199,13 @@
 
 			return false;
 
-		});
+		});*/
 
 		/* ---------------------------------------------- /*
 		 * Google Map
 		/* ---------------------------------------------- */
 
-		var mapLocation = new google.maps.LatLng(34.031428,-118.2071542,17);
+	/*	var mapLocation = new google.maps.LatLng(34.031428,-118.2071542,17);
 
 		map = new GMaps({
 			streetViewControl : false,
@@ -231,7 +231,7 @@
 			icon: image,
 			animation: google.maps.Animation.BOUNCE,
 		});
-
+*/
 	});
 
 })(jQuery);

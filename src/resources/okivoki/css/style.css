@@ -1,0 +1,195 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+      }
+
+@font-face {
+    font-family: 'ComicSans';
+    src: url('font/comic_sans_ms.ttf');
+   }
+
+#map {
+    height: 100%;
+      }
+
+.controls {
+    background-color: #fff;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 300;
+    height: 29px;
+    margin-left: 17px;
+    margin-top: 10px;
+    outline: none;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+       
+      }
+      .controls:focus {
+        border-color: #4d90fe;
+      }
+
+      .layer {
+        position: absolute;
+        background-color: grey;
+        opacity: 0.5;
+        top: 0px;
+        left: 0px;
+        width: 1360px;
+        height: 670px;
+       display: none; /*layer off*/
+      }
+
+.logo {
+    position: absolute;
+    top: 50px;
+    left: 150px;
+}
+
+.menu {
+    position: absolute;
+    top: 230px;
+    left: 70px;
+}
+
+    .l-text_menu {
+        position: absolute;
+        display: inline-block;
+        list-style-type: none;
+        top: 90px;
+        left: -15px;
+        font-family: 'ComicSans';
+        color: #ffffff;
+        font-size: 20px;
+        
+    }
+    .r-text_menu {
+            position: absolute;
+            display: inline-block;
+            list-style-type: none;
+            top: 90px;
+            left: 240px;
+            font-family: 'ComicSans';
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+            .l-text_menu li, .r-text_menu li {
+                padding-bottom: 10px
+            }
+                .small_menu{
+                    font-size: 12px;
+                }
+
+.phone_head {
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    
+}
+
+    .num_phone_head {
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        font-family: ComicSans;
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+.time_head {
+    position: absolute;
+    top: 410px;
+    right: 0px;
+}
+
+    .txt_time_head {
+        position: absolute;
+        top: 15px;
+        left: 70px;
+        font:200 20px ComicSans;
+        color: #3f3c33;
+    }
+
+.position_head {
+    position: absolute;
+    top: 470px;
+    right: 0px
+}
+    .txt_position_head{
+        position: absolute;
+        top: 12px;
+        left: 70px;
+        font:200 20px ComicSans;
+        color: #3f3c33;
+    }
+.vk_head {
+    position: absolute;
+    top: 120px;
+    right: 50px;
+}
+
+.second_layer {
+    position: absolute;
+    top: 625px;
+    width: 1349px;
+}
+
+    .txt_second_layer {
+        position: absolute;
+        top: 900px;
+        left: 170px;
+        width: 430px;
+    }
+        .txt_check-mark {
+            display: inline-block;
+            font: 600 25px ComicSans;
+            color: #ffffff;
+            padding-bottom: 30px;
+            padding-left: 30px;
+
+        }
+
+        .check-mark{
+            display: inline-block;
+        }
+.footer {
+    position: absolute;
+    top: 1421px;
+    width: 1349px;
+}
+
+    .place_footer {
+        position: absolute;
+        top: 1470px;
+        left: 400px;
+        font: 100 30px ComicSans;
+        color: #ffffff;
+    }
+
+    .booking_footer {
+        position: absolute;
+        top: 1550px;
+        left: 230px;
+        font: 100 30px ComicSans;
+        color: #ffca00;
+    }
+
+    .phone_footer {
+        position: absolute;
+        top: 1525px;
+        left: 890px;
+        font: 100 30px ComicSans;
+        color: #ffca00;
+    }
+        .phone_footer img {
+            position: relative;
+            top: 18px;
+            margin-right: 15px;
+        }

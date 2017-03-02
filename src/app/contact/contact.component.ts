@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {Email} from "./email";
+import {ContactService} from "./contact.service";
+import {NgForm} from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact',
@@ -6,10 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
+  constructor(private _contactService : ContactService) { }
+  ngOnInit() { }
 
-  constructor() { }
+  public message: Email = {name: '', email: '', message: ''};
 
-  ngOnInit() {
+  onSubmit() {
+    this._contactService.postEmail(this.message).subscribe(
+      response => this.handleResponse(response),
+      error => this.handleResponse(error)
+    );
   }
 
+  handleResponse(response){
+     console.log(`msg is: {response.status}`);
+
+    if(response.status =='success'){
+      this.message = {name: '', email: '', message: ''};
+      alert('Success');
+    }
+
+    if(response.status =='error'){
+      alert('Failed');
+    }
+  }
 }

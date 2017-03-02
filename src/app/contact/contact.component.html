@@ -1,4 +1,5 @@
 <section id="contact" class="module">
+
   <div class="container">
     <div class="row">
 
@@ -21,26 +22,25 @@
 
       <div class="col-sm-6 col-sm-offset-3">
 
-        <form id="contact-form" role="form">
-          <div class="ajax-hidden">
+        <form id="contact-form" method="POST" action="/email.php" (ngSubmit)="onSubmit()" #tkdForm="ngForm">
+
             <div class="form-group wow fadeInUp">
-              <label class="sr-only" for="c_name">Имя</label>
-              <input type="text" id="c_name" class="form-control" name="c_name" placeholder="Имя">
+              <label class="sr-only" for="name">Имя</label>
+              <input  [(ngModel)]="message.name" ngControl="name"  type="text" id="name" class="form-control" name="name" placeholder="Имя">
             </div>
 
             <div class="form-group wow fadeInUp" data-wow-delay=".1s">
-              <label class="sr-only" for="c_email">Email address</label>
-              <input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+              <label class="sr-only" for="email">Email address</label>
+              <input  [(ngModel)]="message.email" ngControl="email"  type="email" id="email" class="form-control" name="email" placeholder="E-mail">
             </div>
 
             <div class="form-group wow fadeInUp" data-wow-delay=".2s">
-              <textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Ваше сообщение"></textarea>
+              <textarea [(ngModel)]="message.message" ngControl="message"  class="form-control" id="message" name="message" rows="7" placeholder="Ваше сообщение"></textarea>
             </div>
 
             <button type="submit" class="btn btn-block btn-custom-2 wow fadeInUp" data-wow-delay=".3s">ОТПРАВИТЬ
             </button>
-          </div>
-          <div class="ajax-response"></div>
+
         </form>
 
       </div>

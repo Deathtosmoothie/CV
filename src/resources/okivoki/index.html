@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PlaceID finder</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  </head>
+    
+  <body>
+    <input id="pac-input" class="controls" type="text"
+        placeholder="Введите адрес">
+   <div id="map"></div>
+      <div class="logo"><img src="images/Logo.png" alt="ОКИ ВОКИ"></div>
+      <div class="menu">
+            <ul class="l-text_menu">
+                <li>ШАУРМА <span class="small_menu">(ОСТРАЯ)</span></li>
+                <li>ШАУРМА <span class="small_menu">(КЛАССИЧЕСКАЯ)</span></li>  
+                <li>WOK <span class="small_menu">(СЛИВОЧНЫЙ)</span></li>  
+                <li>WOK <span class="small_menu">(ТРИ МЯСА)</span></li>  
+                <li>ПИТА <span class="small_menu">(КЛАССИЧЕСКАЯ)</span></li>  
+            </ul>
+            <ul class="r-text_menu">
+                <li>129<span class="small_menu">р./200гр.</span></li>
+                <li>119<span class="small_menu">р./250гр.</span></li>  
+                <li>149<span class="small_menu">р./180гр.</span></li>  
+                <li>159<span class="small_menu">р./220гр.</span></li>  
+                <li>79<span class="small_menu">р./170гр.</span></li>       
+            </ul>
+          <img src="images/menu_back.png">
+      </div>
+      <div class="phone_head">
+          <span class="num_phone_head">29-40-47</span>
+          <img src="images/phone_back.png">
+      </div>
+      <div class="time_head">
+          <span class="txt_time_head">с 10:00 до 19:00</span>
+          <img src="images/time_back.png">
+      </div>
+      <div class="position_head">
+          <span class="txt_position_head">ул. ФРУНЗЕ, 83</span>
+          <img src="images/position_back.png">
+      </div>
+      <div class="vk_head"><img src="images/vk_logo.png"></div>
+      
+      <img class="second_layer" src="images/second_layer.png">
+      
+      <div class="txt_second_layer">
+        <img class="check-mark" src="images/check-mark.png"><span class="txt_check-mark">
+            ВСЕГДА СВЕЖИЕ ПРОДУКТЫ</span>
+        <img class="check-mark" src="images/check-mark.png"><span class="txt_check-mark">
+            ГОТОВИМ ПОСЛЕ ВАШЕГО<br> ЗАКАЗА</span>
+        <img class="check-mark" src="images/check-mark.png"><span class="txt_check-mark">
+            БЫСТРО И ВКУСНО</span>
+      </div>
+      <img class="footer" src="images/footer_back.png">
+        <span class="place_footer"><img src="images/point-mark.png"> завтра мы на МЕНДЕЛЕЕВА, 15</span>
+        <span class="booking_footer">ЗАКАЖИТЕ ВОК НА ВАШЕ МЕРОПРИЯТИЕ</span><span class="phone_footer"><img src="images/phone-mark.png"> 29-40-47</span>
+      <!--<div class="layer"></div>-->
+
+    <script>
+// This sample uses the Place Autocomplete widget to allow the user to search
+// for and select a place. The sample then displays an info window containing
+// the place ID and other information about the place that the user has
+// selected.
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 55, lng: 73.23},
+    zoom: 13
+  });
+
+var LayerStyle = [ 
+    { 
+      "stylers": [ 
+          { "lightness": 40 },
+          { "hue": "#ff0011" },
+          { "saturation": -100 }
+
+       ]
+      }
+   
+ ];
+  map.setOptions({styles: LayerStyle});
+
+  var input = document.getElementById('pac-input');
+
+  var autocomplete = new google.maps.places.Autocomplete(input);
+  autocomplete.bindTo('bounds', map);
+
+  map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  var infowindow = new google.maps.InfoWindow();
+  var MarkerImage = 'images/car_marker.png';
+  var marker = new google.maps.Marker({
+    map: map,
+    icon: MarkerImage
+  });
+  marker.addListener('click', function() {
+    infowindow.open(map, marker);
+  });
+
+  autocomplete.addListener('place_changed', function() {
+    infowindow.close();
+    var place = autocomplete.getPlace();
+    if (!place.geometry) {
+      return;
+    }
+
+    if (place.geometry.viewport) {
+      map.fitBounds(place.geometry.viewport);
+    } else {
+      map.setCenter(place.geometry.location);
+      map.setZoom(17);
+    }
+
+    // Set the position of the marker using the place ID and location.
+    marker.setPlace({
+      placeId: place.place_id,
+      location: place.geometry.location
+    });
+    marker.setVisible(true);
+
+    infowindow.setContent('<div><strong>' + place.name + '</strong><br>' + 'Привет! Мы здесь!');
+    infowindow.open(map, marker);
+  });
+}
+
+    </script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7-BGck2_Luh4t8weAVldhrWxVshKmo_Q&libraries=places&signed_in=true&callback=initMap"
+        async defer></script>
+  </body>
+</html>
