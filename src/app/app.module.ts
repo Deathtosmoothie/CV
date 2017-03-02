@@ -16,6 +16,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import {ContactService} from "./contact/contact.service";
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {ContactService} from "./contact/contact.service";
     CalloutComponent,
     TechnologiesComponent,
     AboutComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
