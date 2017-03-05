@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Email} from "./email";
-import {ContactService} from "./contact.service";
+import {HttpService} from './http.service';
 import {NgForm} from '@angular/forms';
 
 
@@ -9,29 +8,14 @@ import {NgForm} from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
-  constructor(private _contactService : ContactService) { }
-  ngOnInit() { }
+export class ContactComponent{
+  constructor(private httpService: HttpService) {}
 
-  public message: Email = {name: '', email: '', message: ''};
+  onSubmit(name: any, email: any, message: any) {
 
-  onSubmit() {
-    this._contactService.postEmail(this.message).subscribe(
-      response => this.handleResponse(response),
-      error => this.handleResponse(error)
+    this.httpService.sendData({name: name, email: email, message: message})
+      .subscribe(
+      data => console.log(data)
     );
-  }
-
-  handleResponse(response){
-     console.log(`msg is: {response.status}`);
-
-    if(response.status =='success'){
-      this.message = {name: '', email: '', message: ''};
-      alert('Success');
-    }
-
-    if(response.status =='error'){
-      alert('Failed');
-    }
   }
 }

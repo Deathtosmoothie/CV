@@ -15,8 +15,8 @@ import { CalloutComponent } from './callout/callout.component';
 import { TechnologiesComponent } from './technologies/technologies.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import {ContactService} from "./contact/contact.service";
 import { FooterComponent } from './footer/footer.component';
+import {HttpService} from "./contact/http.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +38,7 @@ import { FooterComponent } from './footer/footer.component';
     FormsModule,
     HttpModule
   ],
-  providers: [ContactService],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
