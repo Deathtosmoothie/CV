@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import {HttpService} from './http.service';
 import {NgForm} from '@angular/forms';
 
@@ -8,14 +8,30 @@ import {NgForm} from '@angular/forms';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent{
+export class ContactComponent implements OnInit{
   constructor(private httpService: HttpService) {}
+
+    statusMsg = '';
+
+  ngOnInit() {
+
+  }
 
   onSubmit(name: any, email: any, message: any) {
 
-    this.httpService.sendData({name: name, email: email, message: message})
-      .subscribe(
-      data => console.log(data)
-    );
+      if(name == '' || email == '') {
+          this.statusMsg = '';
+          return
+      }
+      else {
+          this.httpService.sendData({name: name, email: email, message: message})
+              .subscribe(
+                  data => console.log(data)
+
+              );
+           this.statusMsg = 'Отправлено!';
+
+      }
+
   }
 }
