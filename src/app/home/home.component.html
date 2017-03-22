@@ -1,9 +1,25 @@
 <div id="home" class="module-image js-height-full">
 
-  <div class="intro">
-    <div class="hello">Веб-разработчик</div>
-    <h1>Руслан Салахутдинов</h1>
-    <div class="who-creates">Front-end разработка, JavaScript, вёрстка сайтов</div>
+  <button (click)="lan=1">RU</button>
+  <button (click)="lan=2">EN</button>
+
+  <div [ngSwitch]="lan">
+
+    <div class="intro">
+      <div class="hello" *ngSwitchCase="1">Веб-разработчик</div>
+      <div class="hello" *ngSwitchCase="2">Web-developer</div>
+      <div class="hello" *ngSwitchDefault>Веб-разработчик</div>
+
+      <h1 *ngSwitchCase="1">Руслан Салахутдинов</h1>
+      <h1 *ngSwitchCase="2">Ruslan Salakhutdinov</h1>
+      <h1 *ngSwitchDefault>Руслан Салахутдинов</h1>
+
+      <div class="who-creates" *ngSwitchCase="1">Front-end разработка, JavaScript, вёрстка сайтов</div>
+      <div class="who-creates" *ngSwitchCase="2">Front-end development, JavaScript, HTML/CSS</div>
+      <div class="who-creates" *ngSwitchDefault>Front-end разработка, JavaScript, вёрстка сайтов</div>
+
+    </div>
+
   </div>
 
   <div class="mouse-icon">

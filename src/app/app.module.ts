@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import {HttpService} from "./contact/http.service";
 
+
 @NgModule({
   declarations: [
     AppComponent,

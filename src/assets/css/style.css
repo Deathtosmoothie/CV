@@ -985,6 +985,14 @@ button.mfp-close {
     background-size: 84%;
     background-repeat: no-repeat;
 }
+.fa-codepen {
+	display: block;
+	width: 60px;
+	height: 60px;
+	background-image: url(/assets/images/social/codepen_icon.png);
+	background-size: 84%;
+	background-repeat: no-repeat;
+}
 .fa-vk:before {
     content: none;
 }
@@ -993,6 +1001,9 @@ button.mfp-close {
 }
 .fa-skype:before {
     content: none;
+}
+.fa-codepen:before {
+	content: none;
 }
 /* ---------------------------------------------- /*
  * Navigation
