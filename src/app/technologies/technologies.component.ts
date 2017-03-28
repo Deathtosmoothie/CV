@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {ItemTech} from "./item-tech";
 
 @Component({
@@ -7,6 +7,8 @@ import {ItemTech} from "./item-tech";
   styleUrls: ['./technologies.component.css']
 })
 export class TechnologiesComponent implements OnInit {
+
+    @Input() lan: string;
 
   constructor() { }
 

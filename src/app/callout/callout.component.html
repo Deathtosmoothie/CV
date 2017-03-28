@@ -4,14 +4,27 @@
     <div class="row">
 
       <div class="col-md-8 col-lg-6 col-lg-offset-2">
-        <h2>ГОТОВЫ К СОТРУДНИЧЕСТВУ?</h2>
-        <div class="callout-decription">
-          В настоящий момент я открыт для предложений
+        <div [ngSwitch]="lan">
+          <h2 *ngSwitchCase="'ru'">ГОТОВЫ К СОТРУДНИЧЕСТВУ?</h2>
+          <h2 *ngSwitchCase="'en'">ARE YOUR READY TO START?</h2>
+          <h2 *ngSwitchDefault>ГОТОВЫ К СОТРУДНИЧЕСТВУ?</h2>
+
+          <div class="callout-decription" *ngSwitchCase="'ru'">
+            В настоящий момент я открыт для предложений.
+          </div>
+          <div class="callout-decription" *ngSwitchCase="'en'">
+            I'm currently available for freelance work.
+          </div>
+          <div class="callout-decription" *ngSwitchDefault>
+            В настоящий момент я открыт для предложений.
+          </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-lg-2 callout-btn">
-        <a href="#contact" class="btn btn-lg btn-block btn-custom-1">Связаться</a>
+      <div class="col-md-4 col-lg-2 callout-btn" [ngSwitch]="lan">
+        <a href="#contact" class="btn btn-lg btn-block btn-custom-1" *ngSwitchCase="'ru'">Связаться</a>
+        <a href="#contact" class="btn btn-lg btn-block btn-custom-1" *ngSwitchCase="'en'">Contact</a>
+        <a href="#contact" class="btn btn-lg btn-block btn-custom-1" *ngSwitchDefault>Связаться</a>
       </div>
 
     </div><!-- .row -->

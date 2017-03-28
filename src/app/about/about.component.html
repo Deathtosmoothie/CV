@@ -13,10 +13,31 @@
 
         <div class="col-sm-12">
 
-          <div class="module-header module-header-left wow fadeInUp">
-            <h2 class="module-title">ОБО МНЕ</h2>
-            <div class="module-subtitle">
-              Мне 25 лет, я имею высшее образование по специальности "Психология". Однако, в настоящее время, я занимаюсь веб-разработкой. Я считаю, что человек должен быть развит всесторонне и не останавливаться на какой-то одной сфере деятельности. Вот чем я занимаюсь помимо программирования:
+          <div class="module-header module-header-left wow fadeInUp" [ngSwitch]="lan">
+            <h2 class="module-title" *ngSwitchCase="'ru'">ОБО МНЕ</h2>
+            <h2 class="module-title" *ngSwitchCase="'en'">ABOUT</h2>
+            <h2 class="module-title" *ngSwitchDefault>ОБО МНЕ</h2>
+
+            <div class="module-subtitle" *ngSwitchCase="'ru'">
+              Мне 25 лет, я имею высшее образование по специальности "Психология".
+              Однако, в настоящее время, я занимаюсь веб-разработкой.
+              Я считаю, что человек должен быть развит всесторонне и не
+              останавливаться на какой-то одной сфере деятельности.
+              Вот чем я занимаюсь помимо программирования:
+            </div>
+            <div class="module-subtitle" *ngSwitchCase="'en'">
+              I'm 25 years old, I have bachelor degree in Psychologies.
+              However, at the moment, I am engaged in web.
+              That's because I believe that a person should be open minded,
+              and it's not necessary to dive only into one activity.
+              That's what I'm doing besides programming:
+            </div>
+            <div class="module-subtitle" *ngSwitchDefault>
+              Мне 25 лет, я имею высшее образование по специальности "Психология".
+              Однако, в настоящее время, я занимаюсь веб-разработкой.
+              Я считаю, что человек должен быть развит всесторонне и не
+              останавливаться на какой-то одной сфере деятельности.
+              Вот чем я занимаюсь помимо программирования:
             </div>
             <div class="module-line"></div>
           </div>
@@ -33,11 +54,29 @@
             <div class="iconboxleft-icon">
               <span class="icon-ill"></span>
             </div>
-            <div class="iconboxleft-text">
-              <h3 class="iconboxleft-title">Иллюстрация</h3>
-              <div class="iconboxleft-desc">
-                Я рисую иллюстрации в Photoshop и Illustrator. Разрабатываю логотипы для фотографов и музыкантов. Был большой опыт вёрстки афиш для мероприятий.
+            <div class="iconboxleft-text" [ngSwitch]="lan">
+              <h3 class="iconboxleft-title" *ngSwitchCase="'ru'">Иллюстрация</h3>
+              <h3 class="iconboxleft-title" *ngSwitchCase="'en'">Illustrations</h3>
+              <h3 class="iconboxleft-title" *ngSwitchDefault>Иллюстрация</h3>
+
+              <div class="iconboxleft-desc" *ngSwitchCase="'ru'">
+                Я рисую иллюстрации в Photoshop и Illustrator.
+                Разрабатываю логотипы для фотографов и музыкантов.
+                Был большой опыт вёрстки афиш для мероприятий.
               </div>
+
+              <div class="iconboxleft-desc" *ngSwitchCase="'en'">
+                I draw in Photoshop and Illustrator.
+                  I create logotypes for local photographers and musicians.
+                  Also, I had quite serious experience of creating event posters.
+              </div>
+
+              <div class="iconboxleft-desc" *ngSwitchDefault>
+                Я рисую иллюстрации в Photoshop и Illustrator.
+                Разрабатываю логотипы для фотографов и музыкантов.
+                Был большой опыт вёрстки афиш для мероприятий.
+              </div>
+
             </div>
           </div>
 
@@ -49,10 +88,25 @@
             <div class="iconboxleft-icon">
               <span class="icon-music"></span>
             </div>
-            <div class="iconboxleft-text">
-              <h3 class="iconboxleft-title">Музыка</h3>
-              <div class="iconboxleft-desc">
-                Я закончил музыкальную школу по классу фортепиано, поэтому сейчас я на нём не играю. Вместо этого пишу электронную музыку в разных жанрах.
+            <div class="iconboxleft-text" [ngSwitch]="lan">
+              <h3 class="iconboxleft-title" *ngSwitchCase="'ru'">Музыка</h3>
+              <h3 class="iconboxleft-title" *ngSwitchCase="'en'">Music</h3>
+              <h3 class="iconboxleft-title" *ngSwitchDefault>Музыка</h3>
+
+              <div class="iconboxleft-desc" *ngSwitchCase="'ru'">
+                Я закончил музыкальную школу по классу фортепиано,
+                поэтому сейчас я на нём не играю. Вместо этого пишу
+                электронную музыку в разных жанрах.
+              </div>
+              <div class="iconboxleft-desc" *ngSwitchCase="'en'">
+                  I graduated from music school in piano,
+                  That's why now I'm not playing it. Instead, I write
+                  electronic music in different genres.
+              </div>
+              <div class="iconboxleft-desc" *ngSwitchDefault>
+                    Я закончил музыкальную школу по классу фортепиано,
+                    поэтому сейчас я на нём не играю. Вместо этого пишу
+                    электронную музыку в разных жанрах.
               </div>
             </div>
           </div>
@@ -69,11 +123,24 @@
             <div class="iconboxleft-icon">
               <span class="icon-en"></span>
             </div>
-            <div class="iconboxleft-text">
+            <div class="iconboxleft-text" [ngSwitch]="lan">
               <h3 class="iconboxleft-title">English</h3>
-              <div class="iconboxleft-desc">
-                Я люблю английский язык и знаю его на хорошем уровне. Иногда я перевожу тексты или видео для себя. Люблю смотреть фильмы в оригинале на английском.
+              <div class="iconboxleft-desc" *ngSwitchCase="'ru'">
+                Я люблю английский язык и знаю его на хорошем уровне.
+                Иногда я перевожу тексты или видео для себя.
+                Люблю смотреть фильмы в оригинале на английском.
               </div>
+                <div class="iconboxleft-desc" *ngSwitchCase="'en'">
+                 I love English and I know it quite well, I think.
+                    Sometimes I translate some text or video from English to Russian.
+                    Also, I like watching movies in English.
+
+                </div>
+                <div class="iconboxleft-desc" *ngSwitchDefault>
+                    Я люблю английский язык и знаю его на хорошем уровне.
+                    Иногда я перевожу тексты или видео для себя.
+                    Люблю смотреть фильмы в оригинале на английском.
+                </div>
             </div>
           </div>
 
@@ -85,11 +152,29 @@
             <div class="iconboxleft-icon">
               <span class="icon-psy"></span>
             </div>
-            <div class="iconboxleft-text">
-              <h3 class="iconboxleft-title">Психология</h3>
-              <div class="iconboxleft-desc">
-                Иногда люди просят у меня помощи. И, если это не мешает основной работе, я с готовностью оказываю помощь в работе с внутренними проблемами
+            <div class="iconboxleft-text" [ngSwitch]="lan">
+              <h3 class="iconboxleft-title" *ngSwitchCase="'ru'">Психология</h3>
+              <h3 class="iconboxleft-title" *ngSwitchCase="'en'">Psychology</h3>
+              <h3 class="iconboxleft-title" *ngSwitchDefault>Психология</h3>
+
+              <div class="iconboxleft-desc" *ngSwitchCase="'ru'">
+                Иногда люди просят у меня помощи.
+                И, если это не мешает основной работе,
+                я с готовностью оказываю помощь в работе
+                с внутренними проблемами
               </div>
+                <div class="iconboxleft-desc" *ngSwitchCase="'en'">
+                   Sometimes people ask me for help.
+                   And, if this doesn't interfere with the main job,
+                   I willingly assist in work
+                   with inner problems.
+                </div>
+                <div class="iconboxleft-desc" *ngSwitchDefault>
+                    Иногда люди просят у меня помощи.
+                    И, если это не мешает основной работе,
+                    я с готовностью оказываю помощь в работе
+                    с внутренними проблемами
+                </div>
             </div>
 
           </div>

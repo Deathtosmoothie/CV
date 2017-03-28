@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, Input } from '@angular/core';
 
 import { ItemsPortfolioComponent } from './items-portfolio/items-portfolio.component';
 
@@ -8,6 +8,8 @@ import { ItemsPortfolioComponent } from './items-portfolio/items-portfolio.compo
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements AfterViewInit {
+
+  @Input() lan: string;
 
   categories = ['all','HTML5/CSS3','JavaScript/JQuery','PHP','WordPress','Angular'];
 

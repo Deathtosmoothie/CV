@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, Input } from '@angular/core';
 import {HttpService} from './http.service';
 import {NgForm} from '@angular/forms';
 
@@ -9,6 +9,9 @@ import {NgForm} from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit{
+
+    @Input() lan: string;
+
   constructor(private httpService: HttpService) {}
 
     statusMsg = '';
@@ -29,7 +32,16 @@ export class ContactComponent implements OnInit{
                   data => console.log(data)
 
               );
-           this.statusMsg = 'Отправлено!';
+          if(this.lan == 'ru') {
+              this.statusMsg = 'Отправлено!';
+          }
+          else if(this.lan == 'en') {
+              this.statusMsg = 'Sended!';
+          }
+          else {
+              this.statusMsg = 'Отправлено!';
+          }
+
 
       }
 

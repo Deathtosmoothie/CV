@@ -3,14 +3,23 @@
   <div class="container">
     <div class="row">
 
-      <div class="col-sm-6 col-sm-offset-3">
+      <div class="col-sm-6 col-sm-offset-3" [ngSwitch]="lan">
 
-        <div class="module-header">
-          <h2 class="module-title">КОНТАКТЫ</h2>
+        <div class="module-header" >
+          <h2 class="module-title" *ngSwitchCase="'ru'">КОНТАКТЫ</h2>
+          <h2 class="module-title" *ngSwitchCase="'en'">CONTACTS</h2>
+          <h2 class="module-title" *ngSwitchDefault>КОНТАКТЫ</h2>
+
           <div class="module-line"></div>
-          <div class="module-subtitle">
+          <div class="module-subtitle" *ngSwitchCase="'ru'">
             Если вы хотите связаться со мной, можете выслать мне электронное письмо или позвонить. <br> Мой номер: 8-905-923-31-46.
           </div>
+            <div class="module-subtitle" *ngSwitchCase="'en'" >
+                If you think, I'm qualified enough for your purposes, you can fill the forms below and send me a letter.
+            </div>
+            <div class="module-subtitle" *ngSwitchDefault>
+                Если вы хотите связаться со мной, можете выслать мне электронное письмо или позвонить. <br> Мой номер: 8-905-923-31-46.
+            </div>
           <div class="module-line"></div>
         </div>
 
@@ -26,7 +35,7 @@
 
             <div class="form-group wow fadeInUp">
               <label class="sr-only" for="name">Имя</label>
-              <input #name  type="text" id="name" class="form-control" name="name" placeholder="Имя" required>
+              <input #name  type="text" id="name" class="form-control" name="name" placeholder="Name" required>
             </div>
 
             <div class="form-group wow fadeInUp" data-wow-delay=".1s">
@@ -35,11 +44,14 @@
             </div>
 
             <div class="form-group wow fadeInUp" data-wow-delay=".2s">
-              <textarea #message class="form-control" id="message" name="message" rows="7" placeholder="Ваше сообщение"></textarea>
+              <textarea #message class="form-control" id="message" name="message" rows="7" placeholder="Message"></textarea>
             </div>
 
             <button type="submit" class="btn btn-block btn-custom-2 wow fadeInUp" data-wow-delay=".3s"
-                    (click)="onSubmit(name.value, email.value, message.value)">ОТПРАВИТЬ
+                    (click)="onSubmit(name.value, email.value, message.value)" [ngSwitch]="lan">
+                <span *ngSwitchCase="'ru'">ОТПРАВИТЬ</span>
+                <span *ngSwitchCase="'en'">SEND MAIL</span>
+                <span *ngSwitchDefault>ОТПРАВИТЬ</span>
             </button>
             <p class="bg-success">{{statusMsg}}</p>
 

@@ -12,18 +12,37 @@
           <span class="icon-bar"></span>
         </button>
 
-
-          <a class="navbar-brand" href="index.html">Руслан Салахутдинов</a>
+        <div [ngSwitch]="lan">
+          <a class="navbar-brand" href="/" *ngSwitchCase="'ru'">Руслан Салахутдинов</a>
+          <a class="navbar-brand" href="/" *ngSwitchCase="'en'">Ruslan Salakhutdinov</a>
+          <a class="navbar-brand" href="/" *ngSwitchDefault>Руслан Салахутдинов</a>
+        </div>
 
       </div>
 
       <div class="collapse navbar-collapse" id="custom-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#home">ГЛАВНАЯ</a></li>
-          <li><a href="#portfolio">ПОРТФОЛИО</a></li>
-          <li><a href="#services">ТЕХНОЛОГИИ</a></li>
-          <li><a href="#about">ОБО МНЕ</a></li>
-          <li><a href="#contact">КОНТАКТЫ</a></li>
+        <ul class="nav navbar-nav navbar-right" [ngSwitch]="lan">
+
+            <li><a href="#home" *ngSwitchCase="'ru'">ГЛАВНАЯ</a></li>
+            <li><a href="#home" *ngSwitchCase="'en'">HOME</a></li>
+            <li><a href="#home" *ngSwitchDefault>ГЛАВНАЯ</a></li>
+
+            <li><a href="#portfolio" *ngSwitchCase="'ru'">ПОРТФОЛИО</a></li>
+            <li><a href="#portfolio" *ngSwitchCase="'en'">PORTFOLIO</a></li>
+            <li><a href="#portfolio" *ngSwitchDefault>>ПОРТФОЛИО</a></li>
+
+            <li><a href="#services" *ngSwitchCase="'ru'">ТЕХНОЛОГИИ</a></li>
+            <li><a href="#services" *ngSwitchCase="'en'">TECHNOLOGIES</a></li>
+            <li><a href="#services" *ngSwitchDefault>>ТЕХНОЛОГИИ</a></li>
+
+            <li><a href="#about" *ngSwitchCase="'ru'">ОБО МНЕ</a></li>
+            <li><a href="#about" *ngSwitchCase="'en'">ABOUT</a></li>
+            <li><a href="#about" *ngSwitchDefault>>ОБО МНЕ</a></li>
+
+            <li><a href="#contact" *ngSwitchCase="'ru'">КОНТАКТЫ</a></li>
+            <li><a href="#contact" *ngSwitchCase="'en'">CONTACTS</a></li>
+            <li><a href="#contact" *ngSwitchDefault>>КОНТАКТЫ</a></li>
+
         </ul>
       </div>
 

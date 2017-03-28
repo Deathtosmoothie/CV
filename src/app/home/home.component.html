@@ -2,15 +2,19 @@
 
 
     <div class="intro">
-      <div class="hello">Веб-разработчик</div>
+        <div [ngSwitch]="lan">
+          <div class="hello" *ngSwitchCase="'ru'">Веб-разработчик</div>
+          <div class="hello" *ngSwitchCase="'en'">Web-developer</div>
+          <div class="hello" *ngSwitchDefault>Веб-разработчик</div>
 
+          <h1 *ngSwitchCase="'ru'">Руслан Салахутдинов</h1>
+          <h1 *ngSwitchCase="'en'">Ruslan Salakhutdinov</h1>
+          <h1 *ngSwitchDefault>Руслан Салахутдинов</h1>
 
-      <h1>Руслан Салахутдинов</h1>
-
-
-      <div class="who-creates">Front-end разработка, JavaScript, вёрстка сайтов</div>
-
-
+          <div class="who-creates" *ngSwitchCase="'ru'">Front-end разработка, JavaScript, вёрстка сайтов</div>
+          <div class="who-creates" *ngSwitchCase="'en'">Front-end development, JavaScript, Html/Css</div>
+          <div class="who-creates" *ngSwitchDefault>Front-end разработка, JavaScript, вёрстка сайтов</div>
+        </div>
     </div>
 
 

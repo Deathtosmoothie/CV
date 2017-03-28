@@ -4,13 +4,39 @@
 
       <div class="col-sm-6 col-sm-offset-3">
 
-        <div class="module-header wow fadeInUp">
-          <h2 class="module-title">ТЕХНОЛОГИИ</h2>
+        <div class="module-header wow fadeInUp" [ngSwitch]="lan">
+          <h2 class="module-title" *ngSwitchCase="'ru'">ТЕХНОЛОГИИ</h2>
+          <h2 class="module-title" *ngSwitchCase="'en'">TECHNOLOGIES</h2>
+          <h2 class="module-title" *ngSwitchDefault>ТЕХНОЛОГИИ</h2>
+
           <div class="module-line"></div>
-          <div class="module-subtitle">
-            Ниже представлены технологии, которые я использовал в своей работе. <br> К данному списку можно добавить опыт в установке локальных серверов (WAMP, XAMPP, LAMP), работа с API Google-maps, Yandex-карт и Wikipedia, опыт в использовании технологии Ajax, а также небольшой опыт программирования на PHP (админ-панель, запросы в БД, скрипт отправки писем).<br>
+
+          <div class="module-subtitle" *ngSwitchCase="'ru'">
+            Ниже представлены технологии, которые я использую в своей работе. <br>
+            К данному списку можно добавить опыт в установке локальных серверов
+            (WAMP, XAMPP, LAMP), работа с API Google-maps, Yandex-карт и Wikipedia,
+            опыт в использовании технологии Ajax, а также небольшой опыт программирования на PHP
+            (админ-панель, запросы в БД, скрипт отправки писем).<br>
             Опыт разработки в операционной системе Linux.
           </div>
+          <div class="module-subtitle" *ngSwitchCase="'en'">
+            Below are the technologies which I use in my work.
+            In addition,<br> I had experience in installing local servers
+            (WAMP, XAMPP, LAMP), working with Google-maps API, Yandex-maps and Wikipedia,
+             Experience in Ajax technology and also basic experience of programming in PHP
+             (simple admin panel, database requests, mail sending script).<br>
+             Experience of working and programming in Linux operating system.
+          </div>
+          <div class="module-subtitle" *ngSwitchDefault>
+          Ниже представлены технологии, которые я использую в своей работе. <br>
+            К данному списку можно добавить опыт в установке локальных серверов
+            (WAMP, XAMPP, LAMP), работа с API Google-maps, Yandex-карт и Wikipedia,
+            опыт в использовании технологии Ajax, а также небольшой опыт программирования на
+            PHP (админ-панель, запросы в БД, скрипт отправки писем).<br>
+          Опыт разработки в операционной системе Linux.
+        </div>
+
+
           <div class="module-line"></div>
         </div>
 

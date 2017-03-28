@@ -5,10 +5,31 @@
       <div class="col-sm-6 col-sm-offset-3">
 
         <div class="module-header wow fadeInUp">
-          <h2 class="module-title">Портфолио</h2>
+          <h2 [ngSwitch]="lan">
+            <h2 class="module-title" *ngSwitchCase="'ru'">Портфолио</h2>
+            <h2 class="module-title" *ngSwitchCase="'en'">Portfolio</h2>
+            <h2 class="module-title" *ngSwitchDefault>Портфолио</h2>
+          </h2>
+
           <div class="module-line"></div>
-          <div class="module-subtitle">
-            Ниже представлены работы, которые я делал полностью с нуля, либо принимал непосредственное участие в их создании. Большинство ресурсов я выполнял в команде разработчиков, но есть и единичные фриланс-заказы.
+          <div [ngSwitch]="lan">
+            <div class="module-subtitle" *ngSwitchCase="'ru'">
+              Ниже представлены работы, которые я делал полностью с нуля,
+              либо принимал непосредственное участие в их создании.
+              Большинство работ я выполнял в команде разработчиков, но есть и единичные фриланс-заказы.
+            </div>
+            <div class="module-subtitle" *ngSwitchCase="'en'">
+              Below you can see my works. Some of them
+              I did completely from scratch and some by taking
+              direct part in their creation.
+              Most of this works I did with the development team,
+              but there are also single freelance orders.
+            </div>
+            <div class="module-subtitle" *ngSwitchDefault>
+              Ниже представлены работы, которые я делал полностью с нуля,
+              либо принимал непосредственное участие в их создании.
+              Большинство работ я выполнял в команде разработчиков, но есть и единичные фриланс-заказы.
+            </div>
           </div>
           <div class="module-line"></div>
         </div>
