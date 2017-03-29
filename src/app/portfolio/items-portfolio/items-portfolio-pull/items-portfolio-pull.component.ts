@@ -12,17 +12,16 @@ export class ItemsPortfolioPullComponent implements OnInit {
     @Input() category;
 
 
-
     allItems: Array<ItemSite> = [
-        new ItemSite('http://www.awolo.work',
+        new ItemSite('/resources/awolo/index.html',
             "url('/assets/images/portfolio/awolo.work.jpg')",
             'Awolo Digital'),
         new ItemSite('https://fastforms.co',
             "url('/assets/images/portfolio/fastforms.jpg')",
             'Fastforms'),
-        new ItemSite('http://blog.awolo.work',
+        new ItemSite('https://do-to-be.org/',
             "url('/assets/images/portfolio/blog.jpg')",
-            'Willding'),
+            'Do-to-Be'),
         new ItemSite('http://www.devotecindustries.com',
             "url('/assets/images/portfolio/devotech.jpg')",
             'Devotecindustries'),
@@ -32,7 +31,7 @@ export class ItemsPortfolioPullComponent implements OnInit {
         new ItemSite('/resources/alexander_kron/index.html',
             "url('/assets/images/portfolio/kron.jpg')",
             'Alexander Kron'),
-        new ItemSite('http://www.мегакам.рф',
+        new ItemSite('/resources/megakam/index.html',
             "url('/assets/images/portfolio/megacam.jpg')",
             'MegaCam'),
         new ItemSite('/resources/kulikov/index.html',
@@ -44,7 +43,7 @@ export class ItemsPortfolioPullComponent implements OnInit {
         new ItemSite('/resources/okivoki/index.html',
             "url('/assets/images/portfolio/okivoki.jpg')",
             'Okivoki'),
-        new ItemSite('http://yapdomik.awolo.work',
+        new ItemSite('http://yapdomik.ru/',
             "url('/assets/images/portfolio/yapdomik.jpg')",
             'Yapdomik'),
         new ItemSite('http://www.thebears.ru',
@@ -65,13 +64,13 @@ export class ItemsPortfolioPullComponent implements OnInit {
     ];
 
     JS: Array<ItemSite> = [
-      new ItemSite('http://www.awolo.work',
+      new ItemSite('/resources/awolo/index.html',
         "url('/assets/images/portfolio/awolo.work.jpg')",
         'Awolo Digital'),
       new ItemSite('/resources/alexander_kron/index.html',
             "url('/assets/images/portfolio/kron.jpg')",
             'Alexander Kron'),
-      new ItemSite('http://www.мегакам.рф',
+      new ItemSite('/resources/megakam/index.html',
         "url('/assets/images/portfolio/megacam.jpg')",
         'MegaCam'),
       new ItemSite('/resources/kulikov/index.html',
@@ -83,7 +82,7 @@ export class ItemsPortfolioPullComponent implements OnInit {
       new ItemSite('/resources/okivoki/index.html',
         "url('/assets/images/portfolio/okivoki.jpg')",
         'Okivoki'),
-      new ItemSite('http://yapdomik.awolo.work',
+      new ItemSite('http://yapdomik.ru/',
         "url('/assets/images/portfolio/yapdomik.jpg')",
         'Yapdomik'),
       new ItemSite('',
@@ -92,43 +91,45 @@ export class ItemsPortfolioPullComponent implements OnInit {
     ];
 
     WP: Array<ItemSite> = [
-      new ItemSite('http://blog.awolo.work',
+      new ItemSite('https://do-to-be.org/',
         "url('/assets/images/portfolio/blog.jpg')",
-        'Willding'),
+        'Do-to-Be'),
       new ItemSite('http://www.thebears.ru',
         "url('/assets/images/portfolio/thebears.jpg')",
         'The Bears')
     ];
 
     HC: Array<ItemSite> = [
-      new ItemSite('http://www.awolo.work',
+      new ItemSite('/resources/awolo/index.html',
         "url('/assets/images/portfolio/awolo.work.jpg')",
         'Awolo Digital'),
       new ItemSite('https://fastforms.co',
         "url('/assets/images/portfolio/fastforms.jpg')",
         'Fastforms'),
-      new ItemSite('http://blog.awolo.work',
+      new ItemSite('https://do-to-be.org/',
         "url('/assets/images/portfolio/blog.jpg')",
-        'Willding'),
+        'Do-to-Be'),
       new ItemSite('http://www.devotecindustries.com',
         "url('/assets/images/portfolio/devotech.jpg')",
         'Devotecindustries'),
       new ItemSite('http://www.dharmaspring.com',
         "url('/assets/images/portfolio/dharmaspring.jpg')",
         'Dharmaspring'),
-      new ItemSite('http://www.мегакам.рф',
+      new ItemSite('/resources/megakam/index.html',
         "url('/assets/images/portfolio/megacam.jpg')",
         'MegaCam'),
       new ItemSite('/resources/kulikov/index.html',
         "url('/assets/images/portfolio/kulikov.jpg')",
         'Kulikov Aleksey'),
-      new ItemSite('http://yapdomik.awolo.work',
+      new ItemSite('http://yapdomik.ru/',
         "url('/assets/images/portfolio/yapdomik.jpg')",
         'Yapdomik')
     ];
 
+
+
     NG: Array<ItemSite> = [
-      new ItemSite('',
+        new ItemSite('',
         "url('/assets/images/portfolio/portfolio.jpg')",
         'Portfolio')
     ];
